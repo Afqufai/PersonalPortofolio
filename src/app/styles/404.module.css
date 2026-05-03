@@ -1,0 +1,50 @@
+.alertTape {
+  position: relative;
+  background-image: repeating-linear-gradient(45deg, #FBBF24 0px, #FBBF24 10px, #000000 10px, #000000 20px);
+}
+
+.alertTape::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(45deg, #DC2626 0px, #DC2626 10px, #000000 10px, #000000 20px);
+  opacity: 0;
+  animation: fadeToRed 1s infinite ease-in-out;
+}
+
+@keyframes fadeToRed {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.alertText {
+  animation: textToRed 1s infinite ease-in-out;
+}
+
+@keyframes textToRed {
+  0% { 
+    color: #fbbf24;
+    text-shadow: none; 
+  }
+  100% { 
+    color: #ef4444;
+    text-shadow: 0 0 20px rgba(239, 68, 68, 0.8); 
+  }
+}
+
+.alertBtn {
+  animation: btnToRed 1s infinite ease-in-out;
+}
+
+@keyframes btnToRed {
+  0%, 50% {
+    border-color: #d97706;
+    color: #fbbf24;
+    box-shadow: none;
+  }
+  100% {
+    border-color: #dc2626;
+    color: #ef4444;
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.4), inset 0 0 10px rgba(220, 38, 38, 0.1);
+  }
+}
