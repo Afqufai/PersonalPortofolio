@@ -1,8 +1,8 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "standalone",
 
-const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  // Put other rule like web images allow in here. None for now. :P
 };
 
-export default nextConfig;
+module.exports = nextConfig;
