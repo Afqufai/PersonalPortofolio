@@ -30,19 +30,33 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-6 mb-16 w-full justify-center">
-          <div className="flex flex-col items-center justify-center p-6 bg-white rounded-sm shadow-2xl w-full sm:w-64">
-            <span className="text-xs font-bold text-slate-500 tracking-widest uppercase mb-2">Name</span>
-            <span className="text-xl font-black text-slate-900 text-center uppercase leading-tight">
-              Afrizal Qurratul Faizin
-            </span>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12 sm:gap-16 mb-20 w-full max-w-4xl mx-auto">
+          <div className="relative w-48 h-48 sm:w-56 sm:h-56 shrink-0 group">
+            <div className="relative w-full h-full bg-slate-800 border-2 border-slate-400 overflow-hidden shadow-2xl z-10">
+              <Image 
+                src="/selfportrait.jpeg" 
+                alt="Self Portrait" 
+                fill
+                sizes="(max-width: 768px) 192px, 224px"
+                priority
+                className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500 object-top"
+              />
+            </div>
           </div>
+          <div className="flex flex-col items-center gap-3 w-full sm:w-auto">
+            <div className="flex flex-col items-center justify-center p-6 bg-white rounded-sm shadow-2xl w-full sm:w-72">
+              <span className="text-xs font-bold text-slate-500 tracking-widest uppercase mb-2">Name</span>
+              <span className="text-xl font-black text-slate-900 text-center uppercase leading-tight">
+                Afrizal Qurratul F.
+              </span>
+            </div>
+            <div className="flex flex-col items-center justify-center p-6 bg-white rounded-sm shadow-2xl w-full sm:w-72">
+              <span className="text-xs font-bold text-slate-500 tracking-widest uppercase mb-2">Student ID</span>
+              <span className="text-3xl font-black text-slate-900 text-center">
+                2341720083
+              </span>
+            </div>
 
-          <div className="flex flex-col items-center justify-center p-6 bg-white rounded-sm shadow-2xl w-full sm:w-64">
-            <span className="text-xs font-bold text-slate-500 tracking-widest uppercase mb-2">Student ID</span>
-            <span className="text-3xl font-black text-slate-900 text-center">
-              2341720083
-            </span>
           </div>
         </div>
 
