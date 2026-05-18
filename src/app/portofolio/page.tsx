@@ -14,7 +14,7 @@ export default function Projects() {
             UNDER CONSTRUCTION
           </h1>
           <p className="text-lg text-amber-300 text-center">
-            Check back later. I haven&apos;t put anything here just yet.
+            Check back later.
           </p>
           <Link href="/" className="text-center w-[50%] px-6 py-3 border border-amber-600 text-amber-400 hover:border-amber-200 rounded-lg transition-colors">
             Back, for now.

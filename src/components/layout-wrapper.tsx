@@ -12,7 +12,7 @@ export default function LayoutWrapper({ children }: LayoutWrapperProps) {
   const pathname = usePathname();
 
   // Pages where header and footer should be shown
-  const showLayoutPages = ['/', '/projects', '/portofolio', '/interest'];
+  const showLayoutPages = ['/', '/projects']; // ADD THE REST LATER
 
   const shouldShowLayout = showLayoutPages.includes(pathname);
 

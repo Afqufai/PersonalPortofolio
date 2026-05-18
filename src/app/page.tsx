@@ -61,7 +61,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center w-full mb-20">
-          <h2 className="text-xl font-black text-slate-300 tracking-[0.2em] uppercase mb-2 text-center flex items-center gap-4">
+          <h2 className="text-xl font-black text-slate-300 tracking-[0.2em] uppercase mb-4 text-center flex items-center gap-8">
             <span className="h-[2px] w-52 bg-slate-600 inline-block"></span>
             Tech Interests
             <span className="h-[2px] w-52 bg-slate-600 inline-block"></span>

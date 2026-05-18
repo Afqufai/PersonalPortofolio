@@ -9,7 +9,7 @@ import {
   SiDocker,
   SiJavascript
 } from "react-icons/si";
-import { FaGithub, FaExternalLinkAlt, FaBook, FaCross, FaCubes, FaCube} from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt, FaBook, FaCross, FaCubes, FaCube, FaGamepad} from "react-icons/fa";
 import Image from "next/image";
 import Footer from "@/components/footer";
 import { FaX } from "react-icons/fa6";
@@ -80,6 +80,55 @@ export default function Projects() {
               </div>
             </div>
 
+            <div className="group flex flex-col sm:flex-row gap-6 p-6 border border-slate-700 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/80 transition-all hover:border-emerald-500/50 hover:shadow-[0_0_25px_rgba(16,185,129,0.1)] w-full">
+              <div className="w-24 h-24 shrink-0 bg-slate-900 border-2 border-slate-600 flex items-center justify-center group-hover:border-emerald-500 transition-colors">
+                <SiArduino className="text-4xl text-slate-500 group-hover:text-emerald-400 transition-colors" />
+              </div>
+              <div className="flex flex-col flex-1">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-3">
+                  <h3 className="text-xl sm:text-2xl font-black text-slate-200 uppercase tracking-wider group-hover:text-white transition-colors">
+                    RFID Gate IoT Ecosystem
+                  </h3>
+                  <div className="flex gap-4">
+                    <Link href="https://github.com/sirfara12/SISTEM-MONITORING-PALANG-TOL-" className="text-slate-400 hover:text-emerald-400 transition-colors">
+                      <FaGithub className="text-xl" />
+                    </Link>
+                    <Link href="#" className="text-slate-400 hover:text-emerald-400 transition-colors">
+                      <FaExternalLinkAlt className="text-xl" />
+                    </Link>
+                  </div>
+                </div>
+                <p className="text-slate-400 text-sm leading-relaxed mb-6 font-medium">
+                  A full-stack ecosystem managing real-time toll gate telemetry. The project demanded severe hardware troubleshooting when an integrated ESP32 and RFID sensor suffered from power fluctuations and connection drops due to unsoldered, loose physical components. The backend was containerized via Docker and deployed via multi-stage GitHub Actions CI/CD pipelines.
+                </p>
+                <div className="flex gap-5 items-center mt-auto border-t border-slate-700 pt-4">
+                  <SiNextdotjs className="text-2xl text-slate-500 hover:text-white transition-colors" title="Next.js" />
+                  <SiTailwindcss className="text-2xl text-slate-500 hover:text-[#06B6D4] transition-colors" title="Tailwind CSS" />
+                  <SiCplusplus className="text-2xl text-slate-500 hover:text-[#00599C] transition-colors" title="C++" />
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div className="w-full mb-10">
+          <div className="relative flex items-center justify-center w-full mb-14">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-slate-600"></div>
+            </div>
+            <div className="relative flex items-center px-6 sm:px-10 py-3 bg-slate-900 border border-slate-600 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
+              <span className="w-2 h-2 rounded-full bg-pink-500 animate-pulse mr-8 shadow-[0_0_8px_rgba(246,130,56,1)]"></span>
+              <h2 className="text-xl sm:text-2xl font-mono font-black text-slate-200 tracking-[0.25em] uppercase">
+                Personal Projects
+              </h2>
+              <span className="hidden sm:block text-xs font-mono text-slate-500 ml-6 border-l border-slate-700 pl-6">
+                /DO-NOT
+              </span>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-8 w-full">
             <div className="group flex flex-col sm:flex-row gap-6 p-6 border border-slate-700 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/80 transition-all hover:border-[#54C5F8]/50 hover:shadow-[0_0_25px_rgba(84,197,248,0.1)] w-full">
               <div className="w-24 h-24 shrink-0 bg-slate-900 border-2 border-slate-600 flex items-center justify-center group-hover:border-[#54C5F8] transition-colors">
                 {/* Apparently you have to ACTUALLY DRAW all this MANUALLY???? */}
@@ -153,55 +202,7 @@ export default function Projects() {
               </div>
             </div>
 
-            <div className="group flex flex-col sm:flex-row gap-6 p-6 border border-slate-700 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/80 transition-all hover:border-emerald-500/50 hover:shadow-[0_0_25px_rgba(16,185,129,0.1)] w-full">
-              <div className="w-24 h-24 shrink-0 bg-slate-900 border-2 border-slate-600 flex items-center justify-center group-hover:border-emerald-500 transition-colors">
-                <SiArduino className="text-4xl text-slate-500 group-hover:text-emerald-400 transition-colors" />
-              </div>
-              <div className="flex flex-col flex-1">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-3">
-                  <h3 className="text-xl sm:text-2xl font-black text-slate-200 uppercase tracking-wider group-hover:text-white transition-colors">
-                    RFID Gate IoT Ecosystem
-                  </h3>
-                  <div className="flex gap-4">
-                    <Link href="https://github.com/sirfara12/SISTEM-MONITORING-PALANG-TOL-" className="text-slate-400 hover:text-emerald-400 transition-colors">
-                      <FaGithub className="text-xl" />
-                    </Link>
-                    <Link href="#" className="text-slate-400 hover:text-emerald-400 transition-colors">
-                      <FaExternalLinkAlt className="text-xl" />
-                    </Link>
-                  </div>
-                </div>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6 font-medium">
-                  A full-stack ecosystem managing real-time toll gate telemetry. The project demanded severe hardware troubleshooting when an integrated ESP32 and RFID sensor suffered from power fluctuations and connection drops due to unsoldered, loose physical components. The backend was containerized via Docker and deployed via multi-stage GitHub Actions CI/CD pipelines.
-                </p>
-                <div className="flex gap-5 items-center mt-auto border-t border-slate-700 pt-4">
-                  <SiNextdotjs className="text-2xl text-slate-500 hover:text-white transition-colors" title="Next.js" />
-                  <SiTailwindcss className="text-2xl text-slate-500 hover:text-[#06B6D4] transition-colors" title="Tailwind CSS" />
-                  <SiCplusplus className="text-2xl text-slate-500 hover:text-[#00599C] transition-colors" title="C++" />
-                </div>
-              </div>
-            </div>
 
-          </div>
-        </div>
-
-        <div className="w-full mb-10">
-          <div className="relative flex items-center justify-center w-full mb-14">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-slate-600"></div>
-            </div>
-            <div className="relative flex items-center px-6 sm:px-10 py-3 bg-slate-900 border border-slate-600 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
-              <span className="w-2 h-2 rounded-full bg-pink-500 animate-pulse mr-8 shadow-[0_0_8px_rgba(246,130,56,1)]"></span>
-              <h2 className="text-xl sm:text-2xl font-mono font-black text-slate-200 tracking-[0.25em] uppercase">
-                Personal Projects
-              </h2>
-              <span className="hidden sm:block text-xs font-mono text-slate-500 ml-6 border-l border-slate-700 pl-6">
-                /DO-NOT
-              </span>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-8 w-full">
             <div className="group flex flex-col sm:flex-row gap-6 p-6 border border-slate-700 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/80 transition-all hover:border-green-500/50 hover:shadow-[0_0_25px_rgba(34,197,94,0.1)] w-full">
               <div className="w-24 h-24 shrink-0 bg-slate-900 border-2 border-slate-600 flex items-center justify-center group-hover:border-green-500 transition-colors">
                 <FaCubes className="text-4xl text-slate-500 group-hover:text-green-400 transition-colors" />
@@ -211,47 +212,25 @@ export default function Projects() {
                   <h3 className="text-xl sm:text-2xl font-black text-slate-200 uppercase tracking-wider group-hover:text-white transition-colors">
                     Phobonima Modpack
                   </h3>
-                  <div className="flex gap-4">
-                    <Link href="#" className="text-slate-400 hover:text-green-400 transition-colors">
-                      <ImCross className="text-xl" />
-                    </Link>
-                  </div>
+                  {/*
+                    <div className="flex gap-4">
+                      <Link href="#" className="text-slate-400 hover:text-green-400 transition-colors">
+                        <ImCross className="text-xl" />
+                      </Link>
+                    </div>
+                  */}
                 </div>
                 <p className="text-slate-400 text-sm leading-relaxed mb-6 font-medium">
-                  A <b className="text-green-500"> Minecraft </b> modpack that focuses around the theme of <b>Extraction Shooter</b> mainly inspired by the core gameplay loop of the Roblox title AniPhobia, this pack was designed as an accessible, community-friendly alternative following controversial administrative decisions within the original game&apos;s community.
+                  A <b className="text-green-500"> Minecraft </b> modpack that focuses around the theme of <b>Hardcore Survival Shooter </b> mainly inspired by the core gameplay loop of the Roblox title AniPhobia, this pack was designed as an accessible, community-friendly alternative following controversial administrative decisions within the original game&apos;s community.
                 </p>
                 <div className="flex gap-5 items-center mt-auto border-t border-slate-700 pt-4">
+                  <FaGamepad className="text-2xl text-slate-500 hover:text-blue-500 transition-colors" title="Game Designing" />
                   <SiJavascript className="text-2xl text-slate-500 hover:text-purple-400 transition-colors" title="KubeJS" />
                   <GiAnvil className="text-2xl text-slate-500 hover:text-[#db9213] transition-colors" title="Forge" />
                   <FaCube className="text-2xl text-slate-500 hover:text-green-500 transition-colors" title="Minecraft 1.20.1" />
                 </div>
               </div>
             </div>
-
-            <div className="group flex flex-col sm:flex-row gap-6 p-6 border border-slate-700 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/80 transition-all hover:border-pink-500/50 hover:shadow-[0_0_25px_rgba(236,72,153,0.1)] w-full">
-              <div className="w-24 h-24 shrink-0 bg-slate-900 border-2 border-slate-600 flex items-center justify-center group-hover:border-pink-500 transition-colors">
-                <FaBook className="text-4xl text-slate-500 group-hover:text-pink-400 transition-colors" />
-              </div>
-              <div className="flex flex-col flex-1">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-3">
-                  <h3 className="text-xl sm:text-2xl font-black text-slate-200 uppercase tracking-wider group-hover:text-white transition-colors">
-                    Threat of Termination
-                  </h3>
-                  <div className="flex gap-4">
-                    <Link href="https://komplekthreatoftermination.carrd.co/" className="text-slate-400 hover:text-pink-400 transition-colors">
-                      <FaExternalLinkAlt className="text-xl" />
-                    </Link>
-                  </div>
-                </div>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6 font-medium">
-                  An Indonesian <b><span className="text-pink-500">BanG Dream! x Komplek x </span><span className="text-cyan-600">The Terminator</span></b> fanfic wrote in 2020 a long way before I got into IT. A lot of stupid crossovers, bad jokes, inside jokes, and a whole rollercoaster of a plot featuring mostly friends, BanG Dream Characters, and lots, and lots of TERMINATORs. Also, the portal website lied about the releasing another chapter. <b className="text-rose-400">It&apos;s cancelled, sorry.</b>
-                </p>
-                <div className="flex gap-5 items-center mt-auto border-t border-slate-700 pt-4">
-                  <span className="text-sm font-medium text-slate-500 hover:text-white transition-colors">Plaintext</span>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </main>
