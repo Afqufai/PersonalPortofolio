@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Projects() {
   return (
-    <div className="flex flex-col min-h-screen w-full items-center justify-center bg-zinc-50 font-sans dark:bg-black">
+    <div className="flex flex-col min-h-screen w-full items-center justify-center bg-zinc-50 font-sans dark:bg-black pt-16">
       <main className="flex flex-col w-full flex-1 items-center justify-center py-32 bg-white dark:bg-black">
 
         <div className="w-full h-6 mb-8" style={{
@@ -14,7 +14,7 @@ export default function Projects() {
             UNDER CONSTRUCTION
           </h1>
           <p className="text-lg text-amber-300 text-center">
-            Check back later. I haven&apos;t put anything here just yet.
+            Check back later.
           </p>
           <Link href="/" className="text-center w-[50%] px-6 py-3 border border-amber-600 text-amber-400 hover:border-amber-200 rounded-lg transition-colors">
             Back, for now.

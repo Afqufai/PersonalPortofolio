@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { SiNextdotjs, SiLinux, SiGit, SiLinuxmint } from "react-icons/si";
+import { SiNextdotjs, SiLinux, SiGit } from "react-icons/si";
 import { FaCubes, FaGamepad } from "react-icons/fa";
-import Footer from "@/components/footer/footer";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col min-h-screen items-center justify-center bg-slate-900 font-sans overflow-hidden">
+    <div className="relative flex flex-col min-h-screen items-center justify-center bg-slate-900 font-sans overflow-hidden pt-16">
 
       <div
         className="absolute inset-0 z-0 opacity-20 pointer-events-none"
@@ -61,7 +61,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center w-full mb-20">
-          <h2 className="text-xl font-black text-slate-300 tracking-[0.2em] uppercase mb-2 text-center flex items-center gap-4">
+          <h2 className="text-xl font-black text-slate-300 tracking-[0.2em] uppercase mb-4 text-center flex items-center gap-8">
             <span className="h-[2px] w-52 bg-slate-600 inline-block"></span>
             Tech Interests
             <span className="h-[2px] w-52 bg-slate-600 inline-block"></span>
@@ -138,7 +138,6 @@ export default function Home() {
           </Link>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }
