@@ -7,104 +7,126 @@ import {
   SiCplusplus,
   SiArduino,
   SiDocker,
-  SiJavascript
+  SiJavascript,
+  SiVercel
 } from "react-icons/si";
-import { FaGithub, FaExternalLinkAlt, FaBook, FaCross, FaCubes, FaCube, FaGamepad} from "react-icons/fa";
-import Image from "next/image";
-import Footer from "@/components/footer";
-import { FaX } from "react-icons/fa6";
-import { ImCross } from "react-icons/im";
-import { BiBlock } from "react-icons/bi";
+import { FaGithub, FaExternalLinkAlt, FaGamepad, FaCube, FaCubes } from "react-icons/fa";
 import { GiAnvil } from "react-icons/gi";
+import Image from "next/image";
+import Snowfall from "@/components/snowfall";
 
 export default function Projects() {
   return (
-    <div className="relative flex flex-col min-h-screen items-center justify-center bg-slate-900 font-sans overflow-hidden pt-16">
-      <div
-        className="absolute inset-0 z-0 opacity-20 pointer-events-none"
-        style={{
-          backgroundImage: `linear-gradient(to right, #94a3b8 1px, transparent 1px), linear-gradient(to bottom, #94a3b8 1px, transparent 1px)`,
-          backgroundSize: '40px 40px',
-          maskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)',
-          WebkitMaskImage: 'radial-gradient(ellipse at center, black 40%, transparent 80%)'
-        }}
-      />
+    <div className="relative flex flex-col min-h-screen items-center justify-center bg-slate-950 font-sans overflow-hidden pt-16">
+
+      {/* Background Gradient */}
+      <div className="absolute inset-0 z-0 bg-linear-to-b from-slate-950 via-slate-900 to-blue-950 pointer-events-none" />
+
+      {/* Procedural Snowfall */}
+      <Snowfall />
 
       <main className="relative z-10 flex w-full max-w-5xl flex-col items-center justify-center px-4 sm:px-8 py-20">
-        <h1 className="text-6xl sm:text-8xl font-black tracking-widest uppercase mb-2 text-transparent bg-clip-text bg-linear-to-b from-white via-slate-300 to-slate-600 drop-shadow-[0_10px_20px_rgba(255,255,255,0.05)]">
+        <h1 className="text-5xl sm:text-7xl font-bold tracking-tight mb-4 text-transparent bg-clip-text bg-linear-to-r from-sky-300 via-white to-cyan-200 drop-shadow-[0_0_30px_rgba(56,189,248,0.2)] text-center">
           Projects
         </h1>
-        <h3 className="text-2xl font-black mb-8 uppercase text-transparent text-center bg-clip-text bg-linear-to-b from-slate-300 via-slate-400 to-slate-700">
-          An archive of my projects I&apos;ve worked on.
+        <h3 className="text-xl sm:text-2xl font-medium mb-12 text-sky-100/80 text-center max-w-2xl leading-relaxed">
+          An archive of my projects I've worked on.
         </h3>
 
         <div className="w-full mb-20">
-          <div className="relative flex items-center justify-center w-full mb-14">
+          <div className="relative flex items-center justify-center w-full mb-12">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-slate-600"></div>
+              <div className="w-full border-t border-white/10"></div>
             </div>
-            <div className="relative flex items-center px-6 sm:px-10 py-3 bg-slate-900 border border-slate-600 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
-              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse mr-8 shadow-[0_0_8px_rgba(59,130,246,1)]"></span>
-              <h2 className="text-xl sm:text-2xl font-mono font-black text-slate-200 tracking-[0.25em] uppercase">
-                Projects
+            <div className="relative flex items-center px-6 sm:px-10 py-3 rounded-full bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+              <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse mr-6 shadow-[0_0_8px_rgba(56,189,248,1)]"></span>
+              <h2 className="text-lg sm:text-xl font-bold text-sky-50 tracking-wider">
+                Featured Projects
               </h2>
-              <span className="hidden sm:block text-xs font-mono text-slate-500 ml-6 border-l border-slate-700 pl-6">
-                /important
-              </span>
             </div>
           </div>
 
           <div className="flex flex-col gap-8 w-full">
-            <div className="group flex flex-col sm:flex-row gap-6 p-6 border border-slate-700 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/80 transition-all hover:border-[#54C5F8]/50 hover:shadow-[0_0_25px_rgba(84,197,248,0.1)] w-full">
-              <div className="w-24 h-24 shrink-0 bg-slate-900 border-2 border-slate-600 flex items-center justify-center group-hover:border-[#54C5F8] transition-colors">
-                <Image src="/projectlogos/SapaWargaLogo.webp" alt="SapaWarga Mobile App" width={96} height={96} />
+
+            {/* Project Card */}
+            <div className="group flex flex-col sm:flex-row gap-6 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-sky-300/30 transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:-translate-y-1 w-full">
+              <div className="w-24 h-24 sm:w-32 sm:h-32 shrink-0 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shadow-inner overflow-hidden group-hover:border-sky-300/50 transition-colors relative">
+                <Image src="/projectlogos/SapaWargaLogo.webp" alt="SapaWarga Mobile App" fill className="object-cover p-2" />
               </div>
               <div className="flex flex-col flex-1">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-3">
-                  <h3 className="text-xl sm:text-2xl font-black text-slate-200 uppercase tracking-wider group-hover:text-white transition-colors">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-sky-50 tracking-wide group-hover:text-white transition-colors">
                     SapaWarga Mobile App
                   </h3>
                   <div className="flex gap-4">
-                    <Link href="https://github.com/MiracleCakra/PBL_Jawara_Mobile" className="text-slate-400 hover:text-[#54C5F8] transition-colors">
+                    <Link href="https://github.com/MiracleCakra/PBL_Jawara_Mobile" className="text-slate-400 hover:text-sky-300 transition-colors bg-white/5 p-2 rounded-full hover:bg-white/10">
                       <FaGithub className="text-xl" />
                     </Link>
                   </div>
                 </div>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6 font-medium">
-                  A port of the &quot;Jawara&quot; web application into the mobile environment, focuses around civilian management. The app was developed with Flutter, Dart, and utilising Supabase as the backend and featuring a machine learning component for marketplace feature.
+                <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                  A port of the "Jawara" web application into the mobile environment, focusing around civilian management. Developed with Flutter, Dart, and utilizing Supabase as the backend, featuring a machine learning component for a marketplace feature.
                 </p>
-                <div className="flex gap-5 items-center mt-auto border-t border-slate-700 pt-4">
-                  <SiFlutter className="text-2xl text-slate-500 hover:text-[#1c8fed] transition-colors" title="Flutter" />
-                  <SiSupabase className="text-2xl text-slate-500 hover:text-[#3ECF8E] transition-colors" title="Supabase" />
+                <div className="flex gap-4 items-center mt-auto border-t border-white/10 pt-4">
+                  <SiFlutter className="text-2xl text-slate-400 hover:text-[#1c8fed] hover:drop-shadow-[0_0_8px_rgba(28,143,237,0.8)] transition-all" title="Flutter" />
+                  <SiSupabase className="text-2xl text-slate-400 hover:text-[#3ECF8E] hover:drop-shadow-[0_0_8px_rgba(62,207,142,0.8)] transition-all" title="Supabase" />
                 </div>
               </div>
             </div>
 
-            <div className="group flex flex-col sm:flex-row gap-6 p-6 border border-slate-700 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/80 transition-all hover:border-emerald-500/50 hover:shadow-[0_0_25px_rgba(16,185,129,0.1)] w-full">
-              <div className="w-24 h-24 shrink-0 bg-slate-900 border-2 border-slate-600 flex items-center justify-center group-hover:border-emerald-500 transition-colors">
-                <SiArduino className="text-4xl text-slate-500 group-hover:text-emerald-400 transition-colors" />
+            {/* Project Card */}
+            <div className="group flex flex-col sm:flex-row gap-6 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-emerald-400/30 transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:-translate-y-1 w-full">
+              <div className="w-24 h-24 sm:w-32 sm:h-32 shrink-0 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shadow-inner group-hover:border-emerald-400/50 transition-colors">
+                <SiArduino className="text-5xl text-slate-400 group-hover:text-emerald-400 group-hover:drop-shadow-[0_0_15px_rgba(52,211,153,0.8)] transition-all" />
               </div>
               <div className="flex flex-col flex-1">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-3">
-                  <h3 className="text-xl sm:text-2xl font-black text-slate-200 uppercase tracking-wider group-hover:text-white transition-colors">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-sky-50 tracking-wide group-hover:text-white transition-colors">
                     RFID Gate IoT Ecosystem
                   </h3>
                   <div className="flex gap-4">
-                    <Link href="https://github.com/sirfara12/SISTEM-MONITORING-PALANG-TOL-" className="text-slate-400 hover:text-emerald-400 transition-colors">
+                    <Link href="https://github.com/sirfara12/SISTEM-MONITORING-PALANG-TOL-" className="text-slate-400 hover:text-emerald-400 transition-colors bg-white/5 p-2 rounded-full hover:bg-white/10">
                       <FaGithub className="text-xl" />
                     </Link>
-                    <Link href="#" className="text-slate-400 hover:text-emerald-400 transition-colors">
+                    <Link href="https://sistem-monitoring-palang-tol.vercel.app/" className="text-slate-400 hover:text-emerald-400 transition-colors bg-white/5 p-2 rounded-full hover:bg-white/10">
                       <FaExternalLinkAlt className="text-xl" />
                     </Link>
                   </div>
                 </div>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6 font-medium">
-                  A full-stack ecosystem managing real-time toll gate telemetry. The project demanded severe hardware troubleshooting when an integrated ESP32 and RFID sensor suffered from power fluctuations and connection drops due to unsoldered, loose physical components. The backend was containerized via Docker and deployed via multi-stage GitHub Actions CI/CD pipelines.
+                <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                  A full-stack ecosystem managing real-time toll gate telemetry. The project demanded severe hardware troubleshooting when an integrated ESP32 and RFID sensor suffered from power fluctuations. The backend was containerized via Docker and deployed via multi-stage GitHub Actions CI/CD pipelines.
                 </p>
-                <div className="flex gap-5 items-center mt-auto border-t border-slate-700 pt-4">
-                  <SiNextdotjs className="text-2xl text-slate-500 hover:text-white transition-colors" title="Next.js" />
-                  <SiTailwindcss className="text-2xl text-slate-500 hover:text-[#06B6D4] transition-colors" title="Tailwind CSS" />
-                  <SiCplusplus className="text-2xl text-slate-500 hover:text-[#00599C] transition-colors" title="C++" />
+                <div className="flex gap-4 items-center mt-auto border-t border-white/10 pt-4">
+                  <SiNextdotjs className="text-2xl text-slate-400 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all" title="Next.js" />
+                  <SiTailwindcss className="text-2xl text-slate-400 hover:text-[#06B6D4] hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.8)] transition-all" title="Tailwind CSS" />
+                  <SiCplusplus className="text-2xl text-slate-400 hover:text-[#00599C] hover:drop-shadow-[0_0_8px_rgba(0,89,156,0.8)] transition-all" title="C++" />
+                </div>
+              </div>
+            </div>
+
+            {/* Project Card */}
+            <div className="group flex flex-col sm:flex-row gap-6 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-blue-400/30 transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:-translate-y-1 w-full">
+              <div className="w-24 h-24 sm:w-32 sm:h-32 shrink-0 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shadow-inner group-hover:border-blue-400/50 transition-colors">
+                <SiVercel className="text-5xl text-slate-400 group-hover:text-blue-400 group-hover:drop-shadow-[0_0_15px_rgba(96,165,250,0.8)] transition-all" />
+              </div>
+              <div className="flex flex-col flex-1">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-sky-50 tracking-wide group-hover:text-white transition-colors">
+                    TapToll Landing Page
+                  </h3>
+                  <div className="flex gap-4">
+                    <Link href="https://smarttolllandingpage.vercel.app/" className="text-slate-400 hover:text-blue-400 transition-colors bg-white/5 p-2 rounded-full hover:bg-white/10">
+                      <FaExternalLinkAlt className="text-xl" />
+                    </Link>
+                  </div>
+                </div>
+                <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                  A modern, responsive landing page for the TapToll (Smart Toll) ecosystem. Designed with a sleek user interface to provide clear information to prospective users and showcase the integration of IoT with web technologies.
+                </p>
+                <div className="flex gap-4 items-center mt-auto border-t border-white/10 pt-4">
+                  <SiNextdotjs className="text-2xl text-slate-400 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all" title="Next.js" />
+                  <SiTailwindcss className="text-2xl text-slate-400 hover:text-[#06B6D4] hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.8)] transition-all" title="Tailwind CSS" />
+                  <SiVercel className="text-2xl text-slate-400 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all" title="Vercel" />
                 </div>
               </div>
             </div>
@@ -113,29 +135,27 @@ export default function Projects() {
         </div>
 
         <div className="w-full mb-10">
-          <div className="relative flex items-center justify-center w-full mb-14">
+          <div className="relative flex items-center justify-center w-full mb-12">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-slate-600"></div>
+              <div className="w-full border-t border-white/10"></div>
             </div>
-            <div className="relative flex items-center px-6 sm:px-10 py-3 bg-slate-900 border border-slate-600 shadow-[0_0_20px_rgba(59,130,246,0.15)]">
-              <span className="w-2 h-2 rounded-full bg-pink-500 animate-pulse mr-8 shadow-[0_0_8px_rgba(246,130,56,1)]"></span>
-              <h2 className="text-xl sm:text-2xl font-mono font-black text-slate-200 tracking-[0.25em] uppercase">
+            <div className="relative flex items-center px-6 sm:px-10 py-3 rounded-full bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+              <span className="w-2 h-2 rounded-full bg-pink-400 animate-pulse mr-6 shadow-[0_0_8px_rgba(244,114,182,1)]"></span>
+              <h2 className="text-lg sm:text-xl font-bold text-sky-50 tracking-wider">
                 Personal Projects
               </h2>
-              <span className="hidden sm:block text-xs font-mono text-slate-500 ml-6 border-l border-slate-700 pl-6">
-                /DO-NOT
-              </span>
             </div>
           </div>
 
           <div className="flex flex-col gap-8 w-full">
-            <div className="group flex flex-col sm:flex-row gap-6 p-6 border border-slate-700 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/80 transition-all hover:border-[#54C5F8]/50 hover:shadow-[0_0_25px_rgba(84,197,248,0.1)] w-full">
-              <div className="w-24 h-24 shrink-0 bg-slate-900 border-2 border-slate-600 flex items-center justify-center group-hover:border-[#54C5F8] transition-colors">
-                {/* Apparently you have to ACTUALLY DRAW all this MANUALLY???? */}
+
+            {/* Project Card */}
+            <div className="group flex flex-col sm:flex-row gap-6 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-sky-300/30 transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:-translate-y-1 w-full">
+              <div className="w-24 h-24 sm:w-32 sm:h-32 shrink-0 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shadow-inner group-hover:border-sky-300/50 transition-colors">
                 <svg
                   viewBox="0 0 508 508"
                   fill="currentColor"
-                  className="w-20 h-20 text-slate-200 group-hover:text-[#54C5F8] transition-colors p-2"
+                  className="w-16 h-16 sm:w-20 sm:h-20 text-slate-400 group-hover:text-sky-300 group-hover:drop-shadow-[0_0_15px_rgba(125,211,252,0.8)] transition-all p-2"
                   aria-hidden="true"
                 >
                   <path
@@ -181,56 +201,51 @@ export default function Projects() {
                 </svg>
               </div>
               <div className="flex flex-col flex-1">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-3">
-                  <h3 className="text-xl sm:text-2xl font-black text-slate-200 uppercase tracking-wider group-hover:text-white transition-colors">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-sky-50 tracking-wide group-hover:text-white transition-colors">
                     Valley of the Frozen Flowers
                   </h3>
                   <div className="flex gap-4">
-                    <Link href="https://github.com/Afqufai/PersonalPortofolio" className="text-slate-400 hover:text-[#54C5F8] transition-colors">
+                    <Link href="https://github.com/Afqufai/PersonalPortofolio" className="text-slate-400 hover:text-sky-300 transition-colors bg-white/5 p-2 rounded-full hover:bg-white/10">
                       <FaGithub className="text-xl" />
                     </Link>
                   </div>
                 </div>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6 font-medium">
+                <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
                   This very website. Built with Tailwind and Next.js, contained with Docker. Initially created for an assignment, but ended up using this as a personal portofolio portal for all my projects... with unserious and personal projects included.
                 </p>
-                <div className="flex gap-5 items-center mt-auto border-t border-slate-700 pt-4">
-                  <SiNextdotjs className="text-2xl text-slate-500 hover:text-white transition-colors" title="Next.js" />
-                  <SiTailwindcss className="text-2xl text-slate-500 hover:text-[#06B6D4] transition-colors" title="Tailwind CSS" />
-                  <SiDocker className="text-2xl text-slate-500 hover:text-[#2496ED] transition-colors" title="Docker" />
+                <div className="flex gap-4 items-center mt-auto border-t border-white/10 pt-4">
+                  <SiNextdotjs className="text-2xl text-slate-400 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all" title="Next.js" />
+                  <SiTailwindcss className="text-2xl text-slate-400 hover:text-[#06B6D4] hover:drop-shadow-[0_0_8px_rgba(6,182,212,0.8)] transition-all" title="Tailwind CSS" />
+                  <SiDocker className="text-2xl text-slate-400 hover:text-[#2496ED] hover:drop-shadow-[0_0_8px_rgba(36,150,237,0.8)] transition-all" title="Docker" />
                 </div>
               </div>
             </div>
 
 
-            <div className="group flex flex-col sm:flex-row gap-6 p-6 border border-slate-700 bg-slate-800/40 backdrop-blur-md hover:bg-slate-800/80 transition-all hover:border-green-500/50 hover:shadow-[0_0_25px_rgba(34,197,94,0.1)] w-full">
-              <div className="w-24 h-24 shrink-0 bg-slate-900 border-2 border-slate-600 flex items-center justify-center group-hover:border-green-500 transition-colors">
-                <FaCubes className="text-4xl text-slate-500 group-hover:text-green-400 transition-colors" />
+            {/* Project Card */}
+            <div className="group flex flex-col sm:flex-row gap-6 p-6 sm:p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-green-400/30 transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:-translate-y-1 w-full">
+              <div className="w-24 h-24 sm:w-32 sm:h-32 shrink-0 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center shadow-inner group-hover:border-green-400/50 transition-colors">
+                <FaCubes className="text-5xl text-slate-400 group-hover:text-green-400 group-hover:drop-shadow-[0_0_15px_rgba(74,222,128,0.8)] transition-all" />
               </div>
               <div className="flex flex-col flex-1">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-3">
-                  <h3 className="text-xl sm:text-2xl font-black text-slate-200 uppercase tracking-wider group-hover:text-white transition-colors">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+                  <h3 className="text-xl sm:text-2xl font-bold text-sky-50 tracking-wide group-hover:text-white transition-colors">
                     Phobonima Modpack
                   </h3>
-                  {/*
-                    <div className="flex gap-4">
-                      <Link href="#" className="text-slate-400 hover:text-green-400 transition-colors">
-                        <ImCross className="text-xl" />
-                      </Link>
-                    </div>
-                  */}
                 </div>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6 font-medium">
-                  A <b className="text-green-500"> Minecraft </b> modpack that focuses around the theme of <b>Hardcore Survival Shooter </b> mainly inspired by the core gameplay loop of the Roblox title AniPhobia, this pack was designed as an accessible, community-friendly alternative following controversial administrative decisions within the original game&apos;s community.
+                <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                  A <span className="text-green-300 font-medium">Minecraft</span> modpack that focuses around the theme of <span className="font-medium text-slate-200">Hardcore Survival Shooter</span>, mainly inspired by the core gameplay loop of the Roblox title AniPhobia. This pack was designed as an accessible, community-friendly alternative.
                 </p>
-                <div className="flex gap-5 items-center mt-auto border-t border-slate-700 pt-4">
-                  <FaGamepad className="text-2xl text-slate-500 hover:text-blue-500 transition-colors" title="Game Designing" />
-                  <SiJavascript className="text-2xl text-slate-500 hover:text-purple-400 transition-colors" title="KubeJS" />
-                  <GiAnvil className="text-2xl text-slate-500 hover:text-[#db9213] transition-colors" title="Forge" />
-                  <FaCube className="text-2xl text-slate-500 hover:text-green-500 transition-colors" title="Minecraft 1.20.1" />
+                <div className="flex gap-4 items-center mt-auto border-t border-white/10 pt-4">
+                  <FaGamepad className="text-2xl text-slate-400 hover:text-blue-400 hover:drop-shadow-[0_0_8px_rgba(96,165,250,0.8)] transition-all" title="Game Designing" />
+                  <SiJavascript className="text-2xl text-slate-400 hover:text-purple-400 hover:drop-shadow-[0_0_8px_rgba(192,132,252,0.8)] transition-all" title="KubeJS" />
+                  <GiAnvil className="text-2xl text-slate-400 hover:text-[#db9213] hover:drop-shadow-[0_0_8px_rgba(219,146,19,0.8)] transition-all" title="Forge" />
+                  <FaCube className="text-2xl text-slate-400 hover:text-green-500 hover:drop-shadow-[0_0_8px_rgba(34,197,94,0.8)] transition-all" title="Minecraft 1.20.1" />
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </main>
