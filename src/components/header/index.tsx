@@ -74,12 +74,6 @@ export default function Header() {
             >
               Portfolio
             </Link>
-            <Link
-              href="/interest"
-              className="text-slate-300 hover:text-[#54C5F8] transition-colors font-medium"
-            >
-              Interests
-            </Link>
           </nav>
 
           {/* Mobile menu button */}
