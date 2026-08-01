@@ -39,7 +39,9 @@ export default function Projects() {
               <div className="w-full border-t border-white/10"></div>
             </div>
             <div className="relative flex items-center px-6 sm:px-10 py-3 rounded-full bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
-              <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse mr-6 shadow-[0_0_8px_rgba(56,189,248,1)]"></span>
+              <Link href="#" target="_blank" rel="noopener noreferrer" className="z-20 cursor-default" title="Secret Portal (Coming Soon)">
+                <span className="block w-2 h-2 rounded-full bg-sky-400 animate-pulse mr-6 shadow-[0_0_8px_rgba(56,189,248,1)]"></span>
+              </Link>
               <h2 className="text-lg sm:text-xl font-bold text-sky-50 tracking-wider">
                 Featured Projects
               </h2>
@@ -142,7 +144,7 @@ export default function Projects() {
             <div className="relative flex items-center px-6 sm:px-10 py-3 rounded-full bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
               <span className="w-2 h-2 rounded-full bg-pink-400 animate-pulse mr-6 shadow-[0_0_8px_rgba(244,114,182,1)]"></span>
               <h2 className="text-lg sm:text-xl font-bold text-sky-50 tracking-wider">
-                Personal Projects
+                Creative & Game Design
               </h2>
             </div>
           </div>
@@ -212,7 +214,7 @@ export default function Projects() {
                   </div>
                 </div>
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  This very website. Built with Tailwind and Next.js, contained with Docker. Initially created for an assignment, but ended up using this as a personal portofolio portal for all my projects... with unserious and personal projects included.
+                  This very website. Built with Tailwind and Next.js, and containerized with Docker. A modern, responsive portfolio demonstrating UI/UX principles, smooth animations, and interactive design methodologies.
                 </p>
                 <div className="flex gap-4 items-center mt-auto border-t border-white/10 pt-4">
                   <SiNextdotjs className="text-2xl text-slate-400 hover:text-white hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all" title="Next.js" />
@@ -235,7 +237,7 @@ export default function Projects() {
                   </h3>
                 </div>
                 <p className="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
-                  A <span className="text-green-300 font-medium">Minecraft</span> modpack that focuses around the theme of <span className="font-medium text-slate-200">Hardcore Survival Shooter</span>, mainly inspired by the core gameplay loop of the Roblox title AniPhobia. This pack was designed as an accessible, community-friendly alternative.
+                  A <span className="text-green-300 font-medium">Minecraft</span> modpack focused on the theme of a <span className="font-medium text-slate-200">Hardcore Survival Shooter</span>, heavily inspired by modern looter-shooters. This project involved deep game design balancing, scripting custom mechanics with KubeJS, and community-driven iterations.
                 </p>
                 <div className="flex gap-4 items-center mt-auto border-t border-white/10 pt-4">
                   <FaGamepad className="text-2xl text-slate-400 hover:text-blue-400 hover:drop-shadow-[0_0_8px_rgba(96,165,250,0.8)] transition-all" title="Game Designing" />

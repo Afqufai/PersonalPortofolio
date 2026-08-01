@@ -1,16 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
 import { SiNextdotjs, SiLinux, SiGit, SiTypescript, SiReact, SiTailwindcss } from "react-icons/si";
-import { FaCubes, FaGamepad, FaWrench } from "react-icons/fa";
+import { FaCubes, FaGamepad, FaWrench, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import Snowfall from "@/components/snowfall";
 
 export default function Home() {
   return (
     <div className="relative flex flex-col min-h-screen items-center justify-center bg-slate-950 font-sans overflow-hidden pt-16">
-      
+
       {/* Background Gradient */}
       <div className="absolute inset-0 z-0 bg-linear-to-b from-slate-950 via-slate-900 to-blue-950 pointer-events-none" />
-      
+
       {/* Procedural Snowfall */}
       <Snowfall />
 
@@ -27,13 +27,13 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col md:flex-row gap-8 sm:gap-12 w-full max-w-5xl mx-auto mb-20 items-stretch">
-          
+
           {/* Left Column: Avatar */}
           <div className="relative w-full md:w-2/5 h-[400px] md:h-auto shrink-0 group">
             <div className="relative w-full h-full bg-slate-800/50 rounded-3xl overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.5)] border border-white/10 backdrop-blur-sm z-10 transition-transform duration-500 group-hover:scale-[1.02]">
-              <Image 
-                src="/selfportrait.jpeg" 
-                alt="Self Portrait" 
+              <Image
+                src="/selfportrait.jpeg"
+                alt="Self Portrait"
                 fill
                 sizes="(max-width: 768px) 100vw, 40vw"
                 priority
@@ -50,9 +50,9 @@ export default function Home() {
             </h2>
             <div className="flex flex-col h-full p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
               <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-medium mb-8">
-                A fullstack web developer who enjoys making silly, small projects to kill time, such as user-centric simulators. I've been writing characters and worlds since 2019. I also draw sometimes, though it's not my main focus as I'm more tech-centric.
+                A fullstack web developer passionate about building efficient, user-centric web applications and exploring digital ecosystems. Beyond coding, I have a strong interest in creative design and world-building, which brings a unique perspective to my problem-solving.
               </p>
-              
+
               <div className="mt-auto">
                 <h3 className="text-xs font-bold text-sky-200/80 tracking-widest uppercase mb-4">Tech Stack</h3>
                 <div className="flex flex-wrap gap-3">
@@ -91,7 +91,7 @@ export default function Home() {
             Tech Interests
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-            
+
             {/* Tech Card */}
             <div className="group flex flex-col p-6 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-sky-300/30 transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:-translate-y-1">
               <div className="flex items-center gap-4 mb-4">
@@ -162,16 +162,23 @@ export default function Home() {
 
         <div className="flex flex-col items-center w-full mb-20">
           <h2 className="text-2xl font-bold text-sky-100 tracking-wider mb-8 text-center flex items-center gap-4">
-            Extra Notes & Contacts
+            Connect With Me
           </h2>
-          <div className="group flex flex-col p-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-white/20 transition-all duration-300 w-full text-center shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
-            <p className="text-sm sm:text-base text-slate-200 leading-relaxed mb-6">
-              Most of the projects are private for personal reasons, some especially used to back up my writing projects in Markdown. If you see me making a commit on a non-coding project, you don't see anything. Just move on.
-            </p>
-            <div className="h-[1px] w-full bg-white/10 mb-6"></div>
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              Use <span className="font-semibold text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]">Email</span> for professional inquiries, and <span className="font-semibold text-[#5865F2] drop-shadow-[0_0_5px_rgba(88,101,242,0.5)]">Discord</span> for casual talks. Not only does it make zero sense to email me a random cookie recipe, but it also doesn't make sense to use Discord for corporate meetings. I didn't make the rules, okay?
-            </p>
+          <div className="flex flex-wrap justify-center gap-6 w-full">
+            <Link href="https://www.linkedin.com/in/afrizal-qurratul-faizin/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 px-8 py-4 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-[#0A66C2]/50 transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:-translate-y-1">
+              <FaLinkedin className="text-3xl text-slate-300 group-hover:text-[#0A66C2] group-hover:drop-shadow-[0_0_10px_rgba(10,102,194,0.6)] transition-all" />
+              <span className="font-bold text-slate-200 group-hover:text-white transition-colors tracking-wide">LinkedIn</span>
+            </Link>
+
+            <Link href="https://github.com/afqufai" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 px-8 py-4 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-slate-400/50 transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:-translate-y-1">
+              <FaGithub className="text-3xl text-slate-300 group-hover:text-white group-hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.6)] transition-all" />
+              <span className="font-bold text-slate-200 group-hover:text-white transition-colors tracking-wide">GitHub</span>
+            </Link>
+
+            <Link href="mailto:afrizalquratulfaizih@gmail.com" className="group flex items-center gap-4 px-8 py-4 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl hover:bg-white/10 hover:border-emerald-400/50 transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:-translate-y-1">
+              <FaEnvelope className="text-3xl text-slate-300 group-hover:text-emerald-400 group-hover:drop-shadow-[0_0_10px_rgba(52,211,153,0.6)] transition-all" />
+              <span className="font-bold text-slate-200 group-hover:text-white transition-colors tracking-wide">Email</span>
+            </Link>
           </div>
         </div>
 
